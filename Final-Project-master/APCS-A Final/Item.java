@@ -21,6 +21,10 @@ public class Item implements Comparable
         //additional method that resets the price of the item
         return this.price = pr;
     }
+    public int getStatic() {
+        //returns the static variable
+        return this.totalItems;
+    }
     public boolean compareTo(Item other) {
         //compares the names and brand of the items using the compareTo() method and checks to see if the price is the same
         if(this.name.equals(other.name) && this.price == other.price && this.brand.equals(other.brand)) {
