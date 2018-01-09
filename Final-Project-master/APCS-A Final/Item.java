@@ -5,7 +5,7 @@
  * @author Bryan Lam
  * 
  */
-public class Item implements Comparable
+public class Item implements Comparable<Item>
 {
     private String name;
     private double price;
@@ -22,16 +22,16 @@ public class Item implements Comparable
         return this.price = pr;
     }
     public int getStatic() {
-        //returns the static variable
+        //returns the static variable, allowing me to print the static variable in the driver class.
         return this.totalItems;
     }
-    public boolean compareTo(Item other) {
-        //compares the names and brand of the items using the compareTo() method and checks to see if the price is the same
+    public int compareTo(Item other) {
+        //compares two Item objects. Returns 0 if the two Items are equal and -1 if not.
         if(this.name.equals(other.name) && this.price == other.price && this.brand.equals(other.brand)) {
-            return true;
+            return 0;
         }
         else {
-            return false;
+            return -1;
         }
     }
     public String toString() {
