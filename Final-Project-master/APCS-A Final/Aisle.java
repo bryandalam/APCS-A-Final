@@ -21,9 +21,9 @@ public class Aisle
         //toString method
         return "The " + aisleName + " aisle is stocked with " + itemName + " and has " + itemsStocked + " avaliable.";
     }
-    public boolean compareAisles(Aisle other) {
+    public boolean compareTo(Aisle other) {
         //compares two Aisle objects using the compareTo method and by checking for numerical equality
-        if(this.aisleName.compareTo(other.aisleName) == 0 && this.itemsStocked == other.itemsStocked) {
+        if(this.aisleName.equals(other.aisleName) && this.itemsStocked == other.itemsStocked) {
             return true;
         }
         else {
